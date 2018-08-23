@@ -23,6 +23,7 @@ function updateHTMLContent(movieName){
   let description = document.getElementById('description')
   let audienceScore = document.getElementById('audienceScore')
   let currentMovies = movies[movieName]
+  let cast= document.getElementById('cast')
   
   title.innerHTML = currentMovies.title
   director.innerHTML = currentMovies.director
@@ -31,4 +32,11 @@ function updateHTMLContent(movieName){
   poster.setAttribute('src', currentMovies.poster)
   description.innerHTML = currentMovies.description
   audienceScore.innerHTML = currentMovies.audienceScore
+  let castInnerHTML = "<ul>"
+  
+  for (let i = 0; i < currentMovies.cast.length; i++){
+    let role = currentMovies.cast[i].role
+    let actor = currentMovies.cast[i].actor
+    castInnerHTML += "<li>" + role + ": " + actor + "</li>"
+  }
 }
