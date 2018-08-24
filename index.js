@@ -35,26 +35,26 @@ function updateHTMLContent(movieName){
   let castInnerHTML = "<ul>"
   let innerReviewHTML = "<div>"
   
-  for (let i = 0; i < currentMovies.cast.length; i++){
-    let role = currentMovies.cast[i].role
-    let actor = currentMovies.cast[i].actor
+  // for (let i = 0; i < currentMovies.cast.length; i++){
+  //   let role = currentMovies.cast[i].role
+  //   let actor = currentMovies.cast[i].actor
+  //   castInnerHTML += "<li>" + role + ": " + actor + "</li>"
+  // }
+  
+  for (let castMember of currentMovies.cast){
+    let role = castMember.role
+    let actor = castMember.actor
     castInnerHTML += "<li>" + role + ": " + actor + "</li>"
   }
   
-  // for (let castMember of currentMovies.cast){
-  //   let role = castMember.role
-  //   let actor = castMember.actor
-  //   castInnerHTML += "<li>" + role + ": " + actor + "</li>"
-  // }
+  castInnerHTML += "</ul>"
+  cast.innerHTML = castInnerHTML
   
   for (let review of currentMovies.reviews){
     let userName = review.username
     let content = review.content
     reviewInnerHTML += "<p>" + username + ": " + content + "</p>" 
   }
-  
-  castInnerHTML += "</ul>"
-  cast.innerHTML = castInnerHTML
   
   reviewInnerHTML += "</div>"
   review.innerHTML = reviewInnerHTML
