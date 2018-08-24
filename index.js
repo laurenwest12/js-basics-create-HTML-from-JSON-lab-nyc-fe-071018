@@ -31,6 +31,7 @@ function updateHTMLContent(movieName){
   //   castInnerHTML += "<li>" + role + ": " + actor + "</li>"
   // }
   
+  
   for (let castMember of currentMovies.cast){
     let role = castMember.role
     let actor = castMember.actor
@@ -40,11 +41,17 @@ function updateHTMLContent(movieName){
   castInnerHTML += ""
   cast.innerHTML = castInnerHTML
   
-   for (let review of currentMovies.reviews){
-    let userName = review.username
-    let content = review.content
-    reviewInnerHTML += ("<p>" + userName + ": " + content + "</p>")
+  for (let i = 0; i < currentMovies.reviews.length; i++){
+    let username = currentMovies.reviews[i].username
+    let content = currentMovies.reviews[i].content
+    castInnerHTML += "<p>" + username + ": " + content + "</p>"
   }
+  
+  // for (let review of currentMovies.reviews){
+  //   let userName = review.username
+  //   let content = review.content
+  //   reviewInnerHTML += ("<p>" + userName + ": " + content + "</p>")
+  // }
   
   reviewsInnerHTML += ""
   reviews.innerHTML = reviewInnerHTML
@@ -52,7 +59,7 @@ function updateHTMLContent(movieName){
 
 updateHTMLContent('Titanic')
 const titanicButton = document.getElementById('Titanic')
-  const terminatorButton = document.getElementById('Terminator 2')
+const terminatorButton = document.getElementById('Terminator 2')
   titanicButton.addEventListener('click', (event) => {
     //do something here
     updateHTMLContent('Titanic')
