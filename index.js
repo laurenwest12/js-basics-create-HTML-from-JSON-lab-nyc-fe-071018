@@ -46,6 +46,12 @@ function updateHTMLContent(movieName){
     castInnerHTML += "<li>" + role + ": " + actor + "</li>"
   }
   
+  for (review of currentMovies.review){
+    let userName = review.username
+    let content = reviews.content
+    reviewInnerHTML += "<p>" + username + ": " + content + "</p>" 
+  }
+  
   castInnerHTML += "</ul>"
   cast.innerHTML = castInnerHTML
 }
