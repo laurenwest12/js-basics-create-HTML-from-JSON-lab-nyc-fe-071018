@@ -25,7 +25,7 @@ function updateHTMLContent(movieName){
   let audienceScore = document.getElementById('audienceScore')
   let currentMovies = movies[movieName]
   let cast = document.getElementById('cast')
-  let review = document.getElementById('reviews')
+  let reviews = document.getElementById('reviews')
   
   title.innerHTML = currentMovies.title
   director.innerHTML = currentMovies.director
