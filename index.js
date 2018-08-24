@@ -50,7 +50,7 @@ function updateHTMLContent(movieName){
   reviews.innerHTML = reviewsInnerHTML
 }
 
-  //updateHTMLContent('Titanic')
+updateHTMLContent('Titanic')
 const titanicButton = document.getElementById('Titanic')
   const terminatorButton = document.getElementById('Terminator 2')
   titanicButton.addEventListener('click', (event) => {
