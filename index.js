@@ -40,13 +40,13 @@ function updateHTMLContent(movieName){
   //   castInnerHTML += "<li>" + role + ": " + actor + "</li>"
   // }
   
-  for (castMember of currentMovies.cast){
+  for (let castMember of currentMovies.cast){
     let role = castMember.role
     let actor = castMember.actor
     castInnerHTML += "<li>" + role + ": " + actor + "</li>"
   }
   
-  for (review of currentMovies.review){
+  for (let review of currentMovies.reviews){
     let userName = review.username
     let content = reviews.content
     reviewInnerHTML += "<p>" + username + ": " + content + "</p>" 
