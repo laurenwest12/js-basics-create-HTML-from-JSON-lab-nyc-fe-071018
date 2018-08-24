@@ -34,17 +34,17 @@ function updateHTMLContent(movieName){
   audienceScore.innerHTML = currentMovies.audienceScore
   let castInnerHTML = "<ul>"
   
-  // for (let i = 0; i < currentMovies.cast.length; i++){
-  //   let role = currentMovies.cast[i].role
-  //   let actor = currentMovies.cast[i].actor
-  //   castInnerHTML += "<li>" + role + ": " + actor + "</li>"
-  // }
-  
-  for (castMember of currentMovies.cast){
-    let role = castMember.role
-    let actor = castMember.actor
+  for (let i = 0; i < currentMovies.cast.length; i++){
+    let role = currentMovies.cast[i].role
+    let actor = currentMovies.cast[i].actor
     castInnerHTML += "<li>" + role + ": " + actor + "</li>"
   }
+  
+  // for (castMember of currentMovies.cast){
+  //   let role = castMember.role
+  //   let actor = castMember.actor
+  //   castInnerHTML += "<li>" + role + ": " + actor + "</li>"
+  // }
   
   castInnerHTML += "</ul>"
   cast.innerHTML = castInnerHTML
