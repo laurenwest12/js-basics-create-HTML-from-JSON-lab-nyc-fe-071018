@@ -56,6 +56,6 @@ function updateHTMLContent(movieName){
     reviewInnerHTML += "<p>" + username + ": " + content + "</p>" 
   }
   
-  reviewInnerHTML += "</div>"
+  innerReviewInnerHTML += "</div>"
   review.innerHTML = reviewInnerHTML
 }
